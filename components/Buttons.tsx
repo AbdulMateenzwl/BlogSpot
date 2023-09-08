@@ -32,7 +32,7 @@ export function SignInButton() {
 	return (
 		<button
 			onClick={() => signIn()}
-			className='mx-2 p-2 bg-blue-800 rounded-xl'
+			className='mx-1 sm:mx-2 p-2 text-black hover:text-white hover:bg-green-700 bg-green-300 rounded-xl'
 		>
 			Sign In
 		</button>
@@ -43,7 +43,7 @@ export function SignOutButton() {
 	return (
 		<button
 			onClick={() => signOut()}
-			className='mx-1 sm:mx-2 p-2 bg-green-800 rounded-xl'
+			className='mx-1 sm:mx-2 p-2 hover:bg-red-700 hover:text-white bg-red-200 text-black rounded-xl'
 		>
 			Sign Out
 		</button>

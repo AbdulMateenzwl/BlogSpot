@@ -14,10 +14,10 @@ export default async function NavMenu() {
 	const session = await getServerSession(authOptions);
 
 	return (
-		<nav className='flex bg-green-400 justify-between'>
+		<nav className='flex bg-white justify-between border border-1 border-b-blue-950'>
 			<Link href={'/'}>
 				<Image
-					src='/next.svg'
+					src='/logo.svg'
 					width={216}
 					height={30}
 					alt='logo'
@@ -25,18 +25,18 @@ export default async function NavMenu() {
 				/>
 			</Link>
 
-			<ul className='flex h-[50px] '>
-				<li className='text-lg m-1 mx-2 bg-green-800 hover:bg-green-50'>
+			<ul className='flex h-[50px] items-center justify-center '>
+				<li className='text-lg m-1 mx-2 bg-blue-800 hover:bg-blue-200 hover:text-black text-white flex items-center justify-center px-3 py-1 rounded-lg'>
 					<Link href={'/about'}>About</Link>
 				</li>
-				<li className='text-lg m-1 mx-2 bg-green-800 hover:bg-green-50'>
+				<li className='text-lg m-1 mx-2 bg-blue-800 hover:bg-blue-200 hover:text-black text-white flex items-center justify-center px-3 py-1 rounded-lg'>
 					<Link href={'/blog'}>Blog</Link>
 				</li>
-				<li className='text-lg m-1 mx-2 bg-green-800 hover:bg-green-50'>
+				<li className='text-lg m-1 mx-2 bg-blue-800 hover:bg-blue-200 hover:text-black text-white flex items-center justify-center px-3 py-1 rounded-lg'>
 					<Link href={'/users'}>Users</Link>
 				</li>
 				<li>{session && <LoggedUserData />}</li>
-				<li className='text-lg m-1 mx-2 bg-green-800 hover:bg-green-50'>
+				<li className='items-center justify-center px-1 py-2 rounded-lg'>
 					{session !== null ? <SignOutButton /> : <SignInButton />}
 				</li>
 			</ul>
